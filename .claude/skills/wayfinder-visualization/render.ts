@@ -236,7 +236,7 @@ async function page(maps: WayfinderMap[], layouts: Layout[]): Promise<string> {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wayfinder grid</title>
+<title>Wayfinder visualization</title>
 <style>
 :root { --wf-fog: url("data:image/svg+xml,${encodeURIComponent(FOG_SVG)}"); }
 ${css}</style>
@@ -270,7 +270,7 @@ if (flags.data) {
 }
 
 const layouts = maps.map(layoutMap);
-const out = flags.out ?? join(tmpdir(), "wayfinder-grid", `${slug}.html`);
+const out = flags.out ?? join(tmpdir(), "wayfinder-visualization", `${slug}.html`);
 await mkdir(dirname(out), { recursive: true });
 await Bun.write(out, await page(maps, layouts));
 

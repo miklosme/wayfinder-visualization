@@ -1,5 +1,5 @@
 ---
-name: wayfinder-grid
+name: wayfinder-visualization
 description: Show wayfinder maps as fog-of-war progress grids, START to TARGET.
 argument-hint: "[owner/repo] [map number or URL ...] [--all]"
 disable-model-invocation: true
